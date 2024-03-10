@@ -115,14 +115,14 @@ public void confirmAdd(ActionEvent actionEvent) {
     // Check if phone number already exists in the list
     for (Friends friend : friendsList.getItems()) {
         if (friend.getPhoneNumber().equals(phoneNum)) {
-            showAlert(Alert.AlertType.ERROR, "Invalid Phone Number", "Phone number already exists.");
+            showAlert(Alert.AlertType.ERROR, "Duplicate Entry", "Phone number already exists.");
             return;
         }
     }
     // Check if the combination of first name and last name already exists in the list
     for (Friends friend : friendsList.getItems()) {
         if (friend.getfirstName().equalsIgnoreCase(firstName) && friend.getlastName().equalsIgnoreCase(lastName)) {
-            showAlert(Alert.AlertType.ERROR, "Duplicate Entry", "This name already exists.");
+            showAlert(Alert.AlertType.ERROR, "Duplicate Entry", "Friend already exists.");
             return;
         }
     }
